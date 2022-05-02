@@ -1,102 +1,87 @@
 <html>
   <head>
     <title>Change color</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- <h1 id="title">TITOLOOOO!</h1>
     <button id="btn1">RED</button>
     <button id="btn2">BLUE</button>
     <br /> -->
-    <form id="form">
-      <div>
-        <label for="surname">Cognome: </label>
-        <input type="text" id="surname" name="surname" required />
+    <header>
+      <h1>Form di contatto:</h1>
+    </header>
+    <main>
+      <div class="card">
+        <form id="form">
+          <div>
+            <label for="surname">*Cognome: </label>
+            <input type="text" id="surname" name="surname" required />
+          </div>
+          <div>
+            <label for="name">*Nome: </label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="idNum">*Matricola: </label>
+            <input
+              type="number"
+              id="idNum"
+              name="idNum"
+              minlenght="12"
+              maxlength="12"
+              required
+            />
+          </div>
+          <div>
+            <label for="region">*Regione: </label>
+            <select required id="region">
+              <option></option>
+              <option>Abruzzo</option>
+              <option>Basilicata</option>
+              <option>Calabria</option>
+              <option>Campania</option>
+              <option>Emilia Romagna</option>
+              <option>Friuli Venezia Giulia</option>
+              <option>Lazio</option>
+              <option>Liguria</option>
+              <option>Lombardia</option>
+              <option>Marche</option>
+              <option>Molise</option>
+              <option>Piemonte</option>
+              <option>Puglia</option>
+              <option>Sardegna</option>
+              <option>Sicilia</option>
+              <option>Toscana</option>
+              <option>Trentino Alto Adige</option>
+              <option>Umbria</option>
+              <option>Valle d'Aosta</option>
+              <option>Veneto</option>
+            </select>
+          </div>
+          <div>
+            <label for="email">*Email: </label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div>
+            <label for="tel">*Telefono: </label>
+            <input type="tel" id="tel" name="tel" />
+          </div>
+          <div>
+            <label for="requests">Richieste particolari: </label>
+            <textarea id="requests" cols="60" rows="12"></textarea>
+          </div>
+          <div class="disclaimer">
+            <p>*I campi con l'asterisco sono obbligatori.</p>
+          </div>
+          <div class="action">
+            <button type="reset">RESET</button>
+            <button type="submit" id="submit">INVIA</button>
+          </div>
+        </form>
       </div>
-      <div>
-        <label for="name">Nome: </label>
-        <input type="text" id="name" name="name" required />
-      </div>
-      <div>
-        <label for="idNum">Matricola: </label>
-        <input
-          type="number"
-          id="idNum"
-          name="idNum"
-          minlenght="12"
-          maxlength="12"
-          required
-        />
-      </div>
-      <div>
-        <label for="region">Regione: </label>
-        <select required id="region">
-          <option></option>
-          <option>Abruzzo</option>
-          <option>Basilicata</option>
-          <option>Calabria</option>
-          <option>Campania</option>
-          <option>Emilia Romagna</option>
-          <option>Friuli Venezia Giulia</option>
-          <option>Lazio</option>
-          <option>Liguria</option>
-          <option>Lombardia</option>
-          <option>Marche</option>
-          <option>Molise</option>
-          <option>Piemonte</option>
-          <option>Puglia</option>
-          <option>Sardegna</option>
-          <option>Sicilia</option>
-          <option>Toscana</option>
-          <option>Trentino Alto Adige</option>
-          <option>Umbria</option>
-          <option>Valle d'Aosta</option>
-          <option>Veneto</option>
-        </select>
-      </div>
-      <div>
-        <label for="email">Email: </label>
-        <input type="email" id="email" name="email" />
-      </div>
-      <div>
-        <label for="tel">Telefono: </label>
-        <input type="tel" id="tel" name="tel" />
-      </div>
-      <div>
-        <label for="requests">Richieste particolari: </label>
-        <textarea id="requests" cols="60" rows="12"></textarea>
-      </div>
-      <button type="reset">RESET</button>
-      <button type="submit" id="submit">INVIA</button>
-    </form>
-    <script>
-      /*       const btn1 = document.getElementById("btn1");
-      const btn2 = document.getElementById("btn2");
-
-      function changeColor(color) {
-        document.getElementById("title").style.color = color;
-      }
-      btn1.addEventListener("click", changeColor.bind(null, "red"));
-      btn2.addEventListener("click", changeColor.bind(null, "blue")); */
-
-      const form = document.getElementById("form");
-
-      function checkHandler(e) {
-        e.preventDefault(); //giusto per non fare richieste a vuoto
-        const matricola = document.getElementById("idNum").value;
-        if (matricola.length !== 12) {
-          alert("Il numero di matricola deve essere composto da 12 cifre.");
-        }
-        if (
-          document.getElementById("tel").value.length == 0 &&
-          document.getElementById("email").value.length == 0
-        ) {
-          alert("Si prega di inserire il numero di telefono o la mail.");
-        }
-        if (document.getElementById("region").value.length == 0) {
-          alert("Si prega di inserire una regione.");
-        }
-      }
-      form.addEventListener("submit", checkHandler);
-    </script>
+    </main>
+    <footer><p id="year"></p></footer>
+    <script src="script.js"></script>
   </body>
 </html>

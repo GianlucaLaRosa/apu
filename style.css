@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: darkgrey;
+}
+
+header {
+  background-color: #0008;
+  width: 100vw;
+  height: 4.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 16px #000;
+  margin-block-end: 3rem;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #a0f1ff44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: fit-content;
+  border: 2px solid #000;
+  border-radius: 25px;
+  padding: 2rem;
+  box-shadow: 5px 5px 15px #0008;
+}
+
+form > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+}
+
+textarea {
+  border-radius: 10px;
+  background-color: #fff8;
+}
+
+input,
+select {
+  width: 62ch;
+  border-radius: 10px;
+  background-color: #fff8;
+}
+
+select,
+textarea {
+  border: 2px groove black;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: 1px solid orange;
+}
+
+label {
+  padding-inline-end: 2rem;
+}
+
+.action {
+  margin-block-start: 4rem;
+}
+
+button {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: #fff8;
+}
+
+#submit {
+  background-color: #ff7340c8;
+  transition: transform 0.6s;
+}
+
+#submit:hover {
+  transform: scale(1.2);
+}
+
+.disclaimer {
+  margin: 0;
+  padding: 0;
+  font-size: 0.7rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 5rem;
+  background-color: #111;
+  color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
