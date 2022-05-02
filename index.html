@@ -3,10 +3,10 @@
     <title>Change color</title>
   </head>
   <body>
-    <h1 id="title">TITOLOOOO!</h1>
+    <!-- <h1 id="title">TITOLOOOO!</h1>
     <button id="btn1">RED</button>
     <button id="btn2">BLUE</button>
-    <br />
+    <br /> -->
     <form id="form">
       <div>
         <label for="surname">Cognome: </label>
@@ -30,6 +30,7 @@
       <div>
         <label for="region">Regione: </label>
         <select required id="region">
+          <option></option>
           <option>Abruzzo</option>
           <option>Basilicata</option>
           <option>Calabria</option>
@@ -61,25 +62,26 @@
         <input type="tel" id="tel" name="tel" />
       </div>
       <div>
-        <textarea cols="60" rows="12"></textarea>
+        <label for="requests">Richieste particolari: </label>
+        <textarea id="requests" cols="60" rows="12"></textarea>
       </div>
       <button type="reset">RESET</button>
       <button type="submit" id="submit">INVIA</button>
     </form>
     <script>
-      const btn1 = document.getElementById("btn1");
+      /*       const btn1 = document.getElementById("btn1");
       const btn2 = document.getElementById("btn2");
 
       function changeColor(color) {
         document.getElementById("title").style.color = color;
       }
       btn1.addEventListener("click", changeColor.bind(null, "red"));
-      btn2.addEventListener("click", changeColor.bind(null, "blue"));
+      btn2.addEventListener("click", changeColor.bind(null, "blue")); */
 
       const form = document.getElementById("form");
 
       function checkHandler(e) {
-        e.preventDefault();
+        e.preventDefault(); //giusto per non fare richieste a vuoto
         const matricola = document.getElementById("idNum").value;
         if (matricola.length !== 12) {
           alert("Il numero di matricola deve essere composto da 12 cifre.");
@@ -89,6 +91,9 @@
           document.getElementById("email").value.length == 0
         ) {
           alert("Si prega di inserire il numero di telefono o la mail.");
+        }
+        if (document.getElementById("region").value.length == 0) {
+          alert("Si prega di inserire una regione.");
         }
       }
       form.addEventListener("submit", checkHandler);
