@@ -30,6 +30,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: fit-content;
+  padding: 1rem;
 }
 
 .card {
@@ -54,11 +56,12 @@ form > div {
 textarea {
   border-radius: 10px;
   background-color: #fff8;
+  resize: none;
 }
 
 input,
 select {
-  width: 62ch;
+  width: 60ch;
   border-radius: 10px;
   background-color: #fff8;
 }
@@ -107,8 +110,6 @@ button {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100vw;
   height: 5rem;
   background-color: #111;
