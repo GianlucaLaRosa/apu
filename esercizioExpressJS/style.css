@@ -44,3 +44,11 @@ form > div:last-child {
 label {
   font-weight: bolder;
 }
+
+button {
+  width: 7rem;
+  height: 3rem;
+  border: 4px solid red;
+  border-radius: 5px;
+  background-color: salmon;
+}

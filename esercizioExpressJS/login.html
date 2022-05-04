@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Form</h1>
+    </header>
+    <main>
+      <form action="http://localhost:3000/login" method="post">
+        <div>
+          <label for="id">Nome utente: </label>
+          <input type="text" name="id" id="id" />
+        </div>
+        <div>
+          <label for="password">Password: </label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div>
+          <button type="submit">LOG IN</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
