@@ -1,7 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+var path = require("path");
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use("/static", express.static(path.join(__dirname, "public")));
 const port = 3000;
 
 const fs = require("fs");
@@ -36,6 +38,8 @@ app.post("/login", (req, res) => {
   if (req.body.id === users.userName && req.body.password === users.password) {
     isLoggedin = true;
     res.sendFile("logged.html", { root: "." });
+  } else {
+    res.sendFile("index.html", { root: "." });
   }
 });
 
