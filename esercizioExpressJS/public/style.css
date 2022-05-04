@@ -52,3 +52,8 @@ button {
   border-radius: 5px;
   background-color: salmon;
 }
+
+li > a {
+  font-family: "Indie Flower", cursive;
+  color: black;
+}
