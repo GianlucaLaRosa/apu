@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  background-color: salmon;
+  padding-inline: 2rem;
+  border: 5px solid red;
+  border-left: none;
+  border-right: none;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Indie Flower", cursive;
+  font-size: 3rem;
+}
+
+main {
+  min-height: 100vh;
+  background-color: blanchedalmond;
+  padding: 2rem;
+}
+
+form {
+  padding-inline-start: 2rem;
+  width: 50%;
+  border-left: 5px solid red;
+}
+form > div {
+  margin: 0.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+form > div:last-child {
+  justify-content: center;
+}
+
+label {
+  font-weight: bolder;
+}
